@@ -15,7 +15,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding: 0;
   font-family: 'Lato', sans-serif;
-  background: #333333;
+  background: #000000;
 }
 
 .main-bg{
@@ -47,11 +47,18 @@ body {
 .view-content{
   z-index: 3;
   position: relative;
+  color: #ffffff;
+  padding-top: 70px;
 }
 
 /* Custom page header */
 .header {
+  
+  margin: auto;
+  position: fixed;
   margin-bottom: 10px;
+  width: 100%;
+  z-index: 4;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -106,7 +113,7 @@ body {
   text-align: center;
   background: transparent;
   padding-top: 15px;
-  z-index: 31;
+  z-index: 3;
   h1{
     color: #FFFFFF;
     font-weight: 800;
@@ -183,9 +190,13 @@ body {
     margin-top: 28px;
   }
 
-  #learn-more{
+  .next{
     color: #ffffff;
     text-align: center;
+    width: 200px;
+    height: 90px;
+    display: block;
+    margin: auto;
     span{
       width: 100%;
       font-size: 25px;
