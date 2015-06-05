@@ -1,0 +1,262 @@
+@import "compass/css3";
+
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: #333333;
+}
+
+.main-bg{
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.home-bg{
+  background: url(../images/bg.jpg) 0 0 no-repeat;
+  background-size: cover;
+
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  z-index: 3;
+  
+}
+.view-content{
+  z-index: 3;
+  position: relative;
+}
+
+/* Custom page header */
+.header {
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background: transparent;
+  }
+
+  .navbar-default{
+    background: transparent;
+    border: 0px;
+    color: #ffffff;
+    .navbar-brand{
+      color: #ffffff;
+    }
+
+    .navbar-nav > li {
+       &.active{
+        background: transparent;
+      }
+    }
+    .navbar-nav > li > a{
+      color: #ffffff;
+     
+    }
+
+
+
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  color: #ffffff;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background: transparent;
+  padding-top: 15px;
+  z-index: 31;
+  h1{
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 30px;
+    transform: skewX(-10deg) skewY(-2deg);
+    -webkit-transform: skewX(-10deg) skewY(-2deg);
+    
+    i{
+        opacity: 1;
+        box-shadow: rgba(255, 255, 255, 0.180392) 0px 0px 300px 191px;
+        letter-spacing: 3px;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        background: none repeat scroll 0 0 #fff;
+        border: 1px solid rgba(0,0,20,.2);
+        box-shadow: 0 0 300px 191px rgba(255,255,255,.15);
+        color: #333333;
+        display: inline-block;
+        font-size: .5em;
+        font-weight: 800;
+        font-style: normal;
+        letter-spacing: 3px;
+        line-height: 20px;
+        padding: 15px 20px;
+        position: relative;
+        text-align: center;
+        top: 23px;
+        word-spacing: 5px;
+        z-index: 1;
+
+        &:first-child:before{
+          border-bottom: 15px solid #fff;
+          border-right: 60px solid transparent;
+          right: 0;
+          top: -18px;
+          z-index: -1;
+          content: "";
+          height: 0;
+          position: absolute;
+          right: 0;
+          width: 0;
+        }
+
+        &:first-child:after{
+          border-left: 30px solid transparent;
+          border-top: 15px solid #fff;
+          bottom: -18px;
+          left: 0;
+          z-index: -1;
+          content: "";
+          height: 0;
+          position: absolute;
+          right: 0;
+          width: 0;
+        }
+    }
+
+  }
+  h2{
+    margin-top: 60px;
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 51px;
+    font-style: italic;
+    transform: skewX(-10deg) skewY(-2deg);
+    -webkit-transform: skewX(-10deg) skewY(-2deg);
+    text-shadow: #FFF 1px 0px 5px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  p + h4 {
+    margin-top: 28px;
+  }
+
+  #learn-more{
+    color: #ffffff;
+    text-align: center;
+    span{
+      width: 100%;
+      font-size: 25px;
+      margin-top: 25px;
+    }
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+/**** ANIMATIONS *****/
+
+
+@include keyframes(bounce) {
+  0%, 20%, 50%, 80%, 100% {
+    @include transform(translateY(0));
+  }
+  40% {
+    @include transform(translateY(-30px));
+  }
+  60% {
+    @include transform(translateY(-15px));
+  }
+}
+
+@include keyframes(cloudLoop) {
+    0% {
+        @include transform(translate3d(0,0,0));
+    }
+
+    100% {
+        @include transform(translate3d(-50%,0,0));
+    }
+}
+
+
+.bounce {
+  @include animation(bounce 2s infinite);
+}
+
+#clouds {
+  visibility: inherit;
+  opacity: 1;
+  background: url(http://www.invisionapp.com/subsystems/do_ui_kit/assets/img/clouds.png) 0px 100% repeat-x;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 250.625em;
+  height: 43.75em;
+  @include animation(cloudLoop 80s linear infinite);
+}
