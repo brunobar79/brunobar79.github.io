@@ -32,18 +32,18 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">The Hacker Way</a>
+            <a class="navbar-brand" href="#/">Bruno Barbieri</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
               <li class="active"><a ng-href="#home" du-smooth-scroll du-scrollspy offset="0">Home</a></li>
-              <li><a ng-href="#about" du-smooth-scroll du-scrollspy offset="-60">About</a></li>
-              <li><a ng-href="#open-source">Open Source</a></li>
-              <li><a ng-href="#personal-projects">Personal Projects</a></li>
-              <li><a ng-href="http://blog.thehackerway.co">Blog</a></li>
-              <li><a ng-href="#contact">Contact</a></li>
+              <li><a ng-href="#about" du-smooth-scroll du-scrollspy offset="-30">About</a></li>
+              <li><a ng-href="#open-source" du-smooth-scroll>Open Source</a></li>
+              <li><a ng-href="#personal-projects" du-smooth-scroll>Personal Projects</a></li>
+              <li><a ng-href="http://thehackerway.co">Blog</a></li>
+              <li><a ng-href="#contact" du-smooth-scroll>Contact</a></li>
             </ul>
           </div>
         </div>
@@ -53,11 +53,14 @@
     <div class="container">
       <div ng-include="'views/home.html'" ></div>
       <div ng-include="'views/about.html'"></div>
+      <div ng-include="'views/open-source.html'"></div>
+      <div ng-include="'views/projects.html'"></div>
+      <div ng-include="'views/contact.html'"></div>
     </div>
 
     <div class="footer">
       <div class="container">
-        <p>Made with <span class="glyphicon glyphicon-heart"></span> in NYC</p>
+        <p>Handcrafted with <span class="glyphicon glyphicon-heart"></span> by me</p>
       </div>
     </div>
 
@@ -84,7 +87,7 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
+    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
