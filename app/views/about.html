@@ -1,48 +1,44 @@
-<div class="view-content" id="about">
+<div class="view-content" id="about" ng-controller="AboutCtrl">
 
-	<h2>WHO'S THIS DUDE?</h2>
+	<h2>ABOUT ME</h2>
 	<div class="row">
 		<div class="col-md-6">
 			<p>
-				My name is Bruno Barbieri. I'm a 27 years old guy from <a href="http://en.wikipedia.org/wiki/Uruguay">Uruguay</a> and I've tried a bunch of things in my like being a rockstar, skateboarder, a beast tamer but I wasn't good enough...
+				I'm Bruno Barbieri, a {{ age }} years old dude from <a href="http://en.wikipedia.org/wiki/Uruguay">Uruguay</a> currently living in Brooklyn, NY. 
 			</p>
 			<p>
-				After that I decided to fully dedicate to the only thing I've being doing consistently through the last 14 years of my life: <strong>Coding</strong>
+				I've tried a bunch of things in my life like being a rockstar, skateboarder, a beast tamer but I wasn't good enough so I decided to fully dedicate to the only thing I've being doing consistently during the last {{ experience }} years of my life: <strong>Coding</strong>
 			</p>
 			<p>
-				I've been playing many roles in the tech area during the last 10 years like: CTO, sysadmin, full-stack developer, SEO &amp; Analytics consultant but I realized that what I enjoy the most is to create user facing stuff: AKA <strong>"Frontend"</strong>
+				I've been playing many roles in the tech area like: sysadmin, full-stack developer, SEO &amp; Analytics consultant, CTO but I realized that what I enjoy the most is to create user facing stuff: A.K.A <strong>"Frontend"</strong>
 			</p>
 			<p>
-				That's exactly what I'm doing right now as a Senior Software Engineer at <a hre="https://delivery.com">delivery.com</a> mastering my skills on AngularJS, Compass, Grunt among other things</a>	
+				That's exactly what I'm doing right now as a Senior Software Engineer at <a hre="https://delivery.com">delivery.com</a> mastering my skills on AngularJS, Compass, Grunt among other cool things</a>	
 			</p>
+			
 			<p>
 				I've been talking in a couple of conferences (<a href="https://eventioz.com.ar/e/devfest-uruguay/speakers">Google DevFest 2012</a> and <a href="https://eventioz.com.ar/e/devfest-montevideo-2013/speakers">Google Developer Day 2013</a> in Montevideo) and doing good in hackathons (<a href="https://plus.google.com/110838246905006662525/posts/MdaVyP42fUx">1st place</a> on Startup Weekend MVD and <a href="http://hackday.co/post/23103616177/and-the-finalists-are">2nd place</a> on Hackday Buenos Aires)
 			<p>
+
+			<p>Lately I've fall in love with <a href="https://developer.apple.com/swift/">Swift</a> and WatchOS, so I'm kinda an iOS guy too..</p>
+
 			<p>
-				During my free time I've been working on a few personal projects and some of then are Open Source.
+				I've been working on a few personal projects and some of then are Open Source.
 			</p>
+
+			<div class="row marketing">
+			    <a ng-href="#open-source" class="next" du-smooth-scroll>
+			      <h4>Check out my open source projects!</h4>
+			      <span class="glyphicon glyphicon-circle-arrow-down bounce"></span>
+			    </a>
+			</div>
+
 		</div>
 		<div class="col-md-6">
 			<ul class="polaroids">
-				<li>
-					<a href="https://www.flickr.com/photos/brunobar79/18559176835/in/album-72157654155275402/" title="Rock!">
-						<img alt="Roeland!" src="//c1.staticflickr.com/1/368/18559176835_917d29d494.jpg"/>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.flickr.com/photos/brunobar79/18372983809/in/album-72157654155275402/" title="Skateboarding">
-						<img alt="Skateboarding" src="//c1.staticflickr.com/9/8841/18372983809_05595c1c77.jpg"/>
-					</a>
-				</li>
-				
-				<li>
-					<a href="https://www.flickr.com/photos/brunobar79/17938499013/in/album-72157654155275402/" title="Dog Walking(?)">
-						<img alt="Dog Walking(?)" src="//c1.staticflickr.com/1/359/17938499013_d93a7b243b.jpg"/>
-					</a>
-				</li>
-				<li>
-					<a href="https://www.flickr.com/photos/brunobar79/18373289768/in/album-72157654155275402/" title="I'm normal">
-						<img alt="We're normal people" src="//c1.staticflickr.com/9/8899/18373289768_01ac24858e_z.jpg"/>
+				<li ng-repeat="pic in polaroids">
+					<a href="{{ pic.href }}" title="{{ pic.title }}">
+						<img alt="{{ pic.alt }}" ng-src="{{ pic.src }}"/>
 					</a>
 				</li>
 				<div class="clear"></div>
@@ -52,14 +48,6 @@
 	</div>
 
 
-
-
-<div class="row marketing">
-    <a ng-href="#open-source" class="next" du-smooth-scroll>
-      <h4>Check out my open source projects!</h4>
-      <span class="glyphicon glyphicon-circle-arrow-down bounce"></span>
-    </a>
-</div>
 
 </div>
 

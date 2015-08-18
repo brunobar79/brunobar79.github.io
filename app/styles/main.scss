@@ -20,9 +20,9 @@ body {
 
 p{
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.02em;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
 }
 
@@ -91,6 +91,28 @@ a{
     color: #ffffff;
     .navbar-brand{
       color: #ffffff;
+      height: 90px;
+
+
+      img{
+        width: 60px;
+        float:left;
+      }
+      span{
+        float: right;
+        margin-top: 8px;
+        width: 85px;
+        margin-left: 10px;
+        opacity: 0;
+        @include transition(opacity 0.2s ease-in-out);
+      }
+      
+      &.active{
+        span{
+          opacity: 1;
+        }
+      }
+
     }
 
     .navbar-nav{
@@ -104,7 +126,8 @@ a{
     }
     .navbar-nav > li > a{
       color: #ffffff;
-     
+      font-size: 18px;
+      padding-top: 30px;
     }
 
 
@@ -231,7 +254,7 @@ a{
     min-height: 900px;
   }
   .marketing{
-    margin-top: 200px;
+    margin-top: 130px;
   }
   
   h4{
@@ -245,8 +268,13 @@ a{
 #about{
   
   h2{
-    margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 80px;
+    margin-top: -15px;
+  }
+
+  .row{
+    margin-top: 50px;
   }
 
   ul.polaroids{
@@ -280,9 +308,9 @@ a{
 
   ul.polaroids img {
       display: block;
-      width: 190px;
-      height: 180px;
-      margin-bottom: 12px;
+      width: 170px;
+      height: 174px;
+      margin-bottom: 10px;
   }
 
   ul.polaroids a:after {
@@ -305,6 +333,18 @@ a{
     margin-top: 0px;
   }
 
+}
+
+#open-source{
+   h2{
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-top: -45px;
+  }
+
+  .row{
+    margin-top: 50px;
+  }
 }
 
 .clear{

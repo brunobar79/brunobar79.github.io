@@ -2,16 +2,32 @@
 
 /**
  * @ngdoc function
- * @name thehackerwaycoApp.controller:MainCtrl
+ * @name website.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the thehackerwaycoApp
+ * Controller of the website
  */
-angular.module('thehackerwaycoApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('website',['duScroll'])
+  .controller('MainCtrl', function ($scope, $location, $document, $timeout) {
+   
+    $timeout(function(){
+    	var path = $location.path().replace(/\//g,'');
+    	if(path !== ''){
+			//Check if there's a section like that
+			var target = document.getElementById(path);
+			console.log(target);
+			if(target !== null){
+				console.log('Section exists',path);
+				console.log(document.getElementById(path));
+				var offset = 0;
+				//Only about needs offset
+				if(path === 'about'){
+					offset = -30;
+				}
+				console.log(offset);
+				$document.scrollToElementAnimated(target,offset);
+			}
+		}
+    });
+ 
+});

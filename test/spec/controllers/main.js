@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('thehackerwaycoApp'));
+  beforeEach(module('website'));
 
   var MainCtrl,
     scope;

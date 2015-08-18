@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name thehackerwaycoApp
+ * @name website
  * @description
- * # thehackerwaycoApp
+ * # website
  *
  * Main module of the application.
  */
 angular
-  .module('thehackerwaycoApp', [
+  .module('website', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

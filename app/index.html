@@ -15,7 +15,7 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
   </head>
-  <body ng-app="thehackerwaycoApp">
+  <body ng-app="website">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -32,7 +32,12 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">Bruno Barbieri</a>
+            <a class="navbar-brand" href="#home" du-scrollspy>
+              <img src="images/logo.png"/>
+              <span>
+                BRUNO BARBIERI
+              </span>
+            </a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -41,7 +46,7 @@
               <li class="active"><a ng-href="#home" du-smooth-scroll du-scrollspy offset="0">Home</a></li>
               <li><a ng-href="#about" du-smooth-scroll du-scrollspy offset="-30">About</a></li>
               <li><a ng-href="#open-source" du-smooth-scroll>Open Source</a></li>
-              <li><a ng-href="#personal-projects" du-smooth-scroll>Personal Projects</a></li>
+              <li><a ng-href="#projects" du-smooth-scroll>Projects</a></li>
               <li><a ng-href="http://thehackerway.co">Blog</a></li>
               <li><a ng-href="#contact" du-smooth-scroll>Contact</a></li>
             </ul>
@@ -60,7 +65,7 @@
 
     <div class="footer">
       <div class="container">
-        <p>Handcrafted with <span class="glyphicon glyphicon-heart"></span> by me</p>
+        <p>Handcrafted by me - #SayNoToTemplates</p>
       </div>
     </div>
 
