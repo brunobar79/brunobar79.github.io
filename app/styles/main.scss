@@ -342,10 +342,102 @@ a{
     margin-top: -45px;
   }
 
+  .repos{
+    h3{
+      font-size: 28px;
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+    ul{
+      margin: 40px 0px;
+      padding: 0px;
+      li{
+        list-style-type: none;
+        padding-right: 0px;
+        float: left;  
+      }
+
+    }
+  }
+
+  .github-logo{
+      text-align: center;
+      img{
+          width: 90px;
+          height: 90px;
+          margin-top: -20px;
+      }
+  }
+
+  
+  .row{
+    margin-top: 30px;
+    &.main-row{
+      margin-top: 50px;
+    }
+  }
+}
+
+#projects{
+   h2{
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-top: -45px;
+  }
+
   .row{
     margin-top: 50px;
   }
+
+  .project-list{
+    li{
+      margin-bottom: 20px;
+      span{
+        display: block;
+        width: 100%;
+        padding-top: 10px;
+        font-style: italic;
+      }
+    }
+  }
 }
+
+#contact{
+   h2{
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-top: -45px;
+  }
+
+  .row{
+    margin-top: 50px;
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
+  p{
+      font-size: 18px;
+  }
+  .input-group{
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 60px;
+  }
+  ul{
+    li{
+      margin-bottom: 20px;
+      list-style-type: none;
+    }
+  }
+  .btn{
+    margin-top: 20px;
+  }
+  .find-me {
+    margin-left: 40px;
+    margin-bottom: 45px;
+  }
+}
+
 
 .clear{
   clear: both;
