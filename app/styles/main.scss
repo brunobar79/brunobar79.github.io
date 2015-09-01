@@ -3,6 +3,9 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "fonts.scss";
+@import "mixins.scss";
+
 // endbower
 
 .browsehappy {
@@ -12,22 +15,37 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+html{
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; 
+}
+
 body {
   padding: 0;
-  font-family: 'Lato', sans-serif;
   background: #000000;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  @include font-smoothing(on);
+  line-height: 1.42857;
 }
 
 p{
-    font-weight: 300;
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.02em;
     margin-bottom: 15px;
 
+
 }
 
+h1, h2, h3, h4, h5 {
+  font-family: "AvenirNext LT Pro", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.1; 
+  font-weight: 500;
+}
+
+
 a{
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .main-bg{
@@ -102,9 +120,11 @@ a{
         float: right;
         margin-top: 8px;
         width: 85px;
-        margin-left: 10px;
+        margin-left: 8px;
         opacity: 0;
         @include transition(opacity 0.2s ease-in-out);
+        @include transform(skewX(-5deg) skewY(-1deg));
+
       }
       
       &.active{
@@ -158,18 +178,23 @@ a{
     color: #FFFFFF;
     font-weight: 800;
     font-size: 30px;
-    transform: skewX(-10deg) skewY(-2deg);
-    -webkit-transform: skewX(-10deg) skewY(-2deg);
+    @include transform(skewX(-10deg) skewY(-2deg));
     
     i{
         opacity: 1;
         box-shadow: rgba(255, 255, 255, 0.180392) 0px 0px 300px 191px;
         letter-spacing: 3px;
         transform: matrix(1, 0, 0, 1, 0, 0);
+        /*
         background: none repeat scroll 0 0 #fff;
         border: 1px solid rgba(0,0,20,.2);
         box-shadow: 0 0 300px 191px rgba(255,255,255,.15);
         color: #333333;
+        */
+        background: none repeat scroll 0 0 #337BB7;
+        border: 2px solid #337ab7;
+        box-shadow: 0 0 300px 191px rgba(255, 255, 255, 0.15);
+        color: white;
         display: inline-block;
         font-size: .5em;
         font-weight: 800;
@@ -219,7 +244,7 @@ a{
     font-style: italic;
     transform: skewX(-10deg) skewY(-2deg);
     -webkit-transform: skewX(-10deg) skewY(-2deg);
-    text-shadow: #FFF 1px 0px 5px;
+    text-shadow: #AAA 2px 0px 3px;
   }
 }
 
@@ -237,10 +262,15 @@ a{
     height: 90px;
     display: block;
     margin: auto;
+
     span{
-      width: 100%;
-      font-size: 25px;
-      margin-top: 25px;
+      font-size: 17px;
+      font-weight: 500;
+      &.glyphicon{
+        width: 100%;
+        font-size: 25px;
+        margin-top: 25px;
+      }
     }
   }
 }
@@ -248,13 +278,14 @@ a{
 #home{
   width: 100%;
   max-width: 684px;
-  min-height: 768px;
+  min-height: 950px;
   margin: auto;
-  @media screen and (min-height: 900px) {
-    min-height: 900px;
-  }
+  
   .marketing{
-    margin-top: 130px;
+    margin-top: 220px;
+    .next{
+        width: 100px;
+    }
   }
   
   h4{
@@ -267,6 +298,9 @@ a{
 /*** ABOUT US PAGE ***/
 #about{
   
+  min-height: 950px;
+  
+
   h2{
     margin-bottom: 20px;
     margin-left: 80px;
@@ -336,7 +370,10 @@ a{
 }
 
 #open-source{
-   h2{
+
+  min-height: 950px;
+
+  h2{
     margin-bottom: 20px;
     margin-left: 80px;
     margin-top: -45px;
@@ -379,7 +416,9 @@ a{
 }
 
 #projects{
-   h2{
+  min-height: 950px;
+
+  h2{
     margin-bottom: 20px;
     margin-left: 80px;
     margin-top: -45px;
@@ -390,20 +429,28 @@ a{
   }
 
   .project-list{
-    li{
-      margin-bottom: 20px;
-      span{
-        display: block;
-        width: 100%;
-        padding-top: 10px;
-        font-style: italic;
+    ul{
+      margin: 0px;
+      padding: 0px;
+    
+      li{
+        margin-bottom: 20px;
+        span{
+          display: block;
+          width: 100%;
+          padding-top: 10px;
+          font-style: italic;
+        }
       }
     }
   }
 }
 
 #contact{
-   h2{
+
+  min-height: 700px;
+
+  h2{
     margin-bottom: 20px;
     margin-left: 80px;
     margin-top: -45px;
@@ -506,12 +553,12 @@ a{
 #clouds {
   visibility: inherit;
   opacity: 1;
-  background: url(http://www.invisionapp.com/subsystems/do_ui_kit/assets/img/clouds.png) 0px 100% repeat-x;
+  background: url(../images/clouds.png) 0px 100% repeat-x;
   position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
   width: 250.625em;
   height: 43.75em;
-  @include animation(cloudLoop 80s linear infinite);
+  @include animation(cloudLoop 30s linear infinite);
 }

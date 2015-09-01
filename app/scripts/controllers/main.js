@@ -15,17 +15,11 @@ angular.module('website',['duScroll'])
     	if(path !== ''){
 			//Check if there's a section like that
 			var target = document.getElementById(path);
-			console.log(target);
 			if(target !== null){
-				console.log('Section exists',path);
-				console.log(document.getElementById(path));
 				var offset = 0;
-				//Only about needs offset
-				if(path === 'about'){
-					offset = -30;
-				}
+				
 				console.log(offset);
-				$document.scrollToElementAnimated(target,offset);
+				$document.scrollToElementAnimated(target,0);
 			}
 		}
     });
