@@ -3,10 +3,11 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "components-font-awesome/scss/font-awesome.scss";
+// endbower
+
 @import "fonts.scss";
 @import "mixins.scss";
-
-// endbower
 
 .browsehappy {
   margin: 0.2em 0;
@@ -88,8 +89,19 @@ a{
   margin: auto;
   position: fixed;
   margin-bottom: 10px;
+  padding: 0px;
   width: 100%;
   z-index: 4;
+
+  .container{
+    &.navbar-open{
+      background: rgba(0,0,0,0.6);
+      padding: 0px 15px;
+      .navbar-nav{
+        width: 100%;
+      }
+    }
+  }
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -101,6 +113,13 @@ a{
 
   .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     background: transparent;
+  }
+
+  .navbar-header{
+    button{
+      margin-top:25px;
+      margin-right: 20px;
+    }
   }
 
   .navbar-default{
@@ -278,7 +297,7 @@ a{
 #home{
   width: 100%;
   max-width: 684px;
-  min-height: 950px;
+  min-height: 850px;
   margin: auto;
   
   .marketing{
@@ -298,7 +317,7 @@ a{
 /*** ABOUT US PAGE ***/
 #about{
   
-  min-height: 950px;
+  min-height: 850px;
   
 
   h2{
@@ -371,7 +390,7 @@ a{
 
 #open-source{
 
-  min-height: 950px;
+  min-height: 850px;
 
   h2{
     margin-bottom: 20px;
@@ -416,7 +435,7 @@ a{
 }
 
 #projects{
-  min-height: 950px;
+  min-height: 850px;
 
   h2{
     margin-bottom: 20px;
@@ -429,12 +448,11 @@ a{
   }
 
   .project-list{
-    ul{
       margin: 0px;
       padding: 0px;
     
       li{
-        margin-bottom: 20px;
+        padding-bottom: 20px;
         span{
           display: block;
           width: 100%;
@@ -442,7 +460,6 @@ a{
           font-style: italic;
         }
       }
-    }
   }
 }
 
@@ -561,4 +578,74 @@ a{
   width: 250.625em;
   height: 43.75em;
   @include animation(cloudLoop 30s linear infinite);
+}
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+    display: none !important;
+}
+
+
+.project-list{
+  &.left{
+    margin-left:0px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+
+  //Responsive fixes
+  .jumbotron h2{
+    font-size: 40px;
+  }
+
+  #home .marketing {
+    margin-top: 80px;
+  }
+
+  p{
+    text-align: justify;
+    padding: 0px 15px;
+  }
+
+  .footer{
+    p{
+      text-align: center;
+    }
+  }
+  .polaroids{
+    li{
+      margin-left: 50px;
+    }
+  }
+
+  .github-logo{
+    padding-top: 30px;
+    p{
+      text-align: center;
+      
+    }
+  }
+
+  .repos{
+    h3{
+      text-align: center;
+    }
+  }
+
+  .project-list{
+      margin-left:0px;
+      padding-left: 20px;
+  }
+
+  #submit{
+    width: 100%;
+  }
+
+  .find-me{
+      margin-top: 100px;
+      padding-top: 110px;
+  }
+
 }

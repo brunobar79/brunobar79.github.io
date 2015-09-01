@@ -21,14 +21,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <div class="header">
-      <a href="#about" du-scrollspy class="dummy-bar"></a>
+    <div class="header" ng-controller="HeaderCtrl">
       <div class="navbar navbar-default" role="navigation">
-        <div class="container" >
+        <div class="container" ng-class="{'navbar-open':navbarStatusOpen}">
           
           <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse" ng-click="toggleNavbarStatus()">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -45,12 +44,12 @@
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
-            <ul class="nav navbar-nav">
-              <li><a href="#home" du-smooth-scroll du-scrollspy >Home</a></li>
-              <li><a href="#about" du-smooth-scroll du-scrollspy>About</a></li>
-              <li><a href="#open-source" du-smooth-scroll du-scrollspy>Open Source</a></li>
-              <li><a href="#projects" du-smooth-scroll du-scrollspy>Projects</a></li>
-              <li><a href="#contact" du-smooth-scroll du-scrollspy>Contact</a></li>
+            <ul class="nav navbar-nav" >
+              <li><a href="#home" du-smooth-scroll du-scrollspy offset="0" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Home</a></li>
+              <li><a href="#about" du-smooth-scroll du-scrollspy offset="-30" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">About</a></li>
+              <li><a href="#open-source" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Open Source</a></li>
+              <li><a href="#projects" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Projects</a></li>
+              <li><a href="#contact" du-smooth-scroll du-scrollspy ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -66,9 +65,7 @@
     </div>
 
     <div class="footer">
-      <div class="container">
-        <p>Handcrafted by me - #SayNoToTemplates</p>
-      </div>
+      <div ng-include="'views/partials/footer.html'" ></div>      
     </div>
 
 
@@ -102,7 +99,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
-
+        <script src="scripts/controllers/header.js"></script>
         <!-- endbuild -->
 </body>
 </html>
