@@ -19,7 +19,7 @@ angular
     'duScroll'
   ]).config(function ($locationProvider, $compileProvider) {
       $locationProvider.html5Mode(true).hashPrefix('!');
-      $compileProvider.debugInfoEnabled(false);
+      $compileProvider.debugInfoEnabled(false);  
 
   });
 
