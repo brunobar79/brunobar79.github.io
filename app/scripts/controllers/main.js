@@ -8,8 +8,19 @@
  * Controller of the website
  */
 angular.module('website',['duScroll'])
-  .controller('MainCtrl', function ($scope, $location, $document, $timeout) {
+  .controller('MainCtrl', function ($scope, $location, $document, $timeout, $rootScope, $window) {
    
+  	$rootScope.screen = {
+        'desktop': false,
+        'tablet': false,
+        'mobile': false
+    };
+
+    $rootScope.screen.desktop = $window.innerWidth > 768;
+    $rootScope.screen.tablet = $window.innerWidth <= 768;
+    $rootScope.screen.mobile = $window.innerWidth <= 375;
+    console.log($rootScope); 
+
     $timeout(function(){
     	var path = $location.path().replace(/\//g,'');
     	if(path !== ''){

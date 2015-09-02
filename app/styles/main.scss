@@ -95,7 +95,7 @@ a{
 
   .container{
     &.navbar-open{
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.75);
       padding: 0px 15px;
       .navbar-nav{
         width: 100%;
@@ -301,7 +301,7 @@ a{
   margin: auto;
   
   .marketing{
-    margin-top: 220px;
+    margin-top: 110px;
     .next{
         width: 100px;
     }
@@ -319,13 +319,6 @@ a{
   
   min-height: 850px;
   
-
-  h2{
-    margin-bottom: 20px;
-    margin-left: 80px;
-    margin-top: -15px;
-  }
-
   .row{
     margin-top: 50px;
   }
@@ -393,8 +386,6 @@ a{
   min-height: 850px;
 
   h2{
-    margin-bottom: 20px;
-    margin-left: 80px;
     margin-top: -45px;
   }
 
@@ -410,7 +401,7 @@ a{
       li{
         list-style-type: none;
         padding-right: 0px;
-        float: left;  
+        float: left; 
       }
 
     }
@@ -438,8 +429,6 @@ a{
   min-height: 850px;
 
   h2{
-    margin-bottom: 20px;
-    margin-left: 80px;
     margin-top: -45px;
   }
 
@@ -465,11 +454,9 @@ a{
 
 #contact{
 
-  min-height: 700px;
+  min-height: 630px;
 
   h2{
-    margin-bottom: 20px;
-    margin-left: 80px;
     margin-top: -45px;
   }
 
@@ -537,6 +524,14 @@ a{
 }
 
 
+.view-content{
+    h2.section-title{
+      margin-bottom: 20px;
+      margin-left: 80px;
+      margin-top: -15px;
+    }
+}
+
 /**** ANIMATIONS *****/
 
 
@@ -593,59 +588,4 @@ a{
   }
 }
 
-@media screen and (max-width: 376px) {
-
-  //Responsive fixes
-  .jumbotron h2{
-    font-size: 40px;
-  }
-
-  #home .marketing {
-    margin-top: 80px;
-  }
-
-  p{
-    text-align: justify;
-    padding: 0px 15px;
-  }
-
-  .footer{
-    p{
-      text-align: center;
-    }
-  }
-  .polaroids{
-    li{
-      margin-left: 50px;
-    }
-  }
-
-  .github-logo{
-    padding-top: 30px;
-    p{
-      text-align: center;
-      
-    }
-  }
-
-  .repos{
-    h3{
-      text-align: center;
-    }
-  }
-
-  .project-list{
-      margin-left:0px;
-      padding-left: 20px;
-  }
-
-  #submit{
-    width: 100%;
-  }
-
-  .find-me{
-      margin-top: 100px;
-      padding-top: 110px;
-  }
-
-}
+@import "responsive-mobile.scss"; 

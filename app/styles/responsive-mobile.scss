@@ -1,0 +1,91 @@
+@media screen and (max-width: 376px) {
+
+	//Responsive fixes
+	.jumbotron{
+		margin-bottom: 20px;
+		h2{
+			font-size: 40px;
+		}
+	}
+
+	#home .marketing {
+		margin-top: 0px;
+	}
+
+	p{
+		text-align: justify;
+		padding: 0px 15px;
+	}
+
+	.footer{
+		p{
+			text-align: center;
+		}
+	}
+	.polaroids{
+		li{
+			margin-left: 50px;
+		}
+	}
+
+	.github-logo{
+		padding-top: 30px;
+		p{
+			text-align: center;
+		}
+	}
+
+	.repos{
+		h3{
+			text-align: center;
+		}
+		ul{
+			width: 400px;
+			li{
+				width: 30%;
+        		height: 25px;
+        		padding: 10px;
+        		iframe{
+        			width: 100%;
+        		}
+			}
+		}
+	}
+
+	#projects{
+		.project-list{
+			margin-left:0px;
+			padding-left: 20px;
+		}
+	}
+
+	#submit{
+		width: 100%;
+	}
+
+	.find-me{
+		margin-top: 40px;
+		margin-left: 40px;
+		margin-bottom: 20px;
+		padding-top: 90px;
+	}
+
+	.view-content{
+		h2.section-title{
+			margin-top: -12px;
+			margin-left: 70px;
+			width: 60%;
+			text-align: center;
+		}
+	}
+
+	#contact{
+		form{
+			padding: 20px;
+		}
+		ul {
+			margin-left: 25px;
+		}
+	}	
+
+}

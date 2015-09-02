@@ -17,7 +17,11 @@ angular
     'ngSanitize',
     'ngTouch',
     'duScroll'
-  ])
-  .config(function () {
-    
+  ]).config(function ($locationProvider, $compileProvider) {
+      $locationProvider.html5Mode(true).hashPrefix('!');
+      $compileProvider.debugInfoEnabled(false);
+
   });
+
+
+

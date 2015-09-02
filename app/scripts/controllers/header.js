@@ -19,7 +19,8 @@
 
     $scope.menuLinkClick = function(){
     	//TO DO, track virtual page view
-    	$(".navbar .container").removeClass("navbar-open");
-    	$(".navbar-collapse").removeClass("in");
+    	angular.element('.navbar .container').removeClass('navbar-open');
+    	angular.element('.navbar-collapse').removeClass('in');
+    	$scope.navbarStatusOpen = false;
     };
 });

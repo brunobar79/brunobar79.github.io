@@ -1,6 +1,6 @@
-<div class="view-content" id="open-source">
+<div class="view-content" id="open-source" ng-controller="OpenSourceCtrl">
 
-	<h2>OPEN SOURCE</h2>
+	<h2 class="section-title">OPEN SOURCE</h2>
 	<div class="row main-row">
 		<div class="col-md-8">
 			<p>
@@ -32,14 +32,8 @@
 		<div class="col-md-6">
 			<p>
 				<ul>
-					<li>
-						<iframe src="https://ghbtns.com/github-btn.html?user=brunobar79&repo=J-I-C&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-					</li>
-					<li>
-						<iframe src="https://ghbtns.com/github-btn.html?user=brunobar79&repo=J-I-C&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-					</li>
-					<li>
-						<iframe src="https://ghbtns.com/github-btn.html?user=brunobar79&repo=J-I-C&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+					<li ng-repeat="type in buttonType">
+						<iframe ng-src="{{ getButtonUrl(type, 'J-I-C') }}" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 					</li>
 				</ul>
 			</p>
@@ -58,14 +52,8 @@
 		<div class="col-md-6">
 			<p>
 				<ul>
-					<li>
-						<iframe src="https://ghbtns.com/github-btn.html?user=brunobar79&repo=GAP&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-					</li>
-					<li>
-						<iframe src="https://ghbtns.com/github-btn.html?user=brunobar79&repo=GAP&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-					</li>
-					<li>
-						<iframe src="https://ghbtns.com/github-btn.html?user=brunobar79&repo=GAP&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+					<li ng-repeat="type in buttonType">
+						<iframe ng-src="{{ getButtonUrl(type, 'GAP') }}" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 					</li>
 				</ul>
 			</p>
