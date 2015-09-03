@@ -510,6 +510,11 @@ a{
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
+    @include transition(background-color 0.3s ease-out);
+    
+    &.fixed{
+      background-color: red;
+    }
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
