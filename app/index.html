@@ -21,37 +21,39 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <div class="header" ng-controller="HeaderCtrl" >
-      <div class="navbar navbar-default" sticky-header sticky-trigger="home" role="navigation">
-        <div class="container"  ng-class="{'navbar-open':navbarStatusOpen}">
-          
-          <div class="navbar-header">
+    <div ng-controller="HeaderCtrl" id="header-wrapper">
+      <div class="header"  sticky-header sticky-trigger="home">
+        <div class="navbar navbar-default"  role="navigation">
+          <div class="container"  ng-class="{'navbar-open':navbarStatusOpen}">
+            
+            <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse" ng-click="toggleNavbarStatus()">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse" ng-click="toggleNavbarStatus()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
 
-            <a class="navbar-brand" href="#home">
-              <img src="images/logo-white.png"/>
-              <span>
-                BRUNO BARBIERI
-              </span>
-            </a>
-            <h2 id="header-section-name"></h2>
-          </div>
+              <a class="navbar-brand" href="#home">
+                <img src="images/logo-white.png"/>
+                <span>
+                  BRUNO BARBIERI
+                </span>
+              </a>
+              <h2 id="header-section-name"></h2>
+            </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+            <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
-            <ul class="nav navbar-nav" >
-              <li><a href="#home" du-smooth-scroll du-scrollspy offset="0" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Home</a></li>
-              <li><a href="#about" du-smooth-scroll du-scrollspy offset="-30" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">About</a></li>
-              <li><a href="#open-source" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Open Source</a></li>
-              <li><a href="#projects" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Projects</a></li>
-              <li><a href="#contact" du-smooth-scroll du-scrollspy ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Contact</a></li>
-            </ul>
+              <ul class="nav navbar-nav" >
+                <li><a href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Home</a></li>
+                <li><a href="#about" du-smooth-scroll du-scrollspy offset="-30" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">About</a></li>
+                <li><a href="#open-source" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Open Source</a></li>
+                <li><a href="#projects" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Projects</a></li>
+                <li><a href="#contact" du-smooth-scroll du-scrollspy ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

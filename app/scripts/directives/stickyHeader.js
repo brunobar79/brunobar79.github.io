@@ -36,14 +36,13 @@ angular.module('website')
 					    ticking         = false,
 					    sectionsTitles = document.getElementsByClassName('section-title'),
 						lastHeaderText = '',
-						FADE_DURATION = 300;
+						FADE_DURATION = 150;
 
 					function setupPositions(){
 						targetPosition = getBottomPosition(document.getElementById(scope.stickyTrigger));
 						for(var i = 0; i < sectionsTitles.length; i++){
 							sectionPositions.push(getOffsetTop(sectionsTitles[i]));
 						}
-						console.log(sectionPositions);
 					}
 
 					/**
@@ -117,11 +116,13 @@ angular.module('website')
 								}
 								
 								setTimeout(function(){
+									//Set text
 									h2.innerText = headerText;
 									lastHeaderText = headerText;
+									//Fade in
 									angular.element(h2).removeClass('fade-out');
 								},FADE_DURATION);
-								
+
 							},FADE_DURATION);
 						}
 
@@ -131,7 +132,9 @@ angular.module('website')
 
 					// only listen for scroll events
 					window.addEventListener('scroll', onScroll, false);
-
+					window.addEventListener('resize', function(){
+						setupPositions();
+					}, false);
 				}
 			};
 		})

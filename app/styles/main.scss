@@ -60,7 +60,7 @@ a{
 }
 
 .home-bg{
-  background: url(../images/bg.jpg) 0 0 no-repeat;
+  background: url(../images/bg.jpg) 0 -45px no-repeat;
   background-size: cover;
   overflow: hidden;
   @include box-shadow(inset 0 -120px 120px -60px black);
@@ -80,142 +80,171 @@ a{
   z-index: 3;
   position: relative;
   color: #ffffff;
-  padding-top: 70px;
+  padding-top: 85px;
+  p{
+    color: #ddd;
+  }
 }
 
 /* Custom page header */
-.header {
-  
-  margin: auto;
-  position: fixed;
-  margin-bottom: 10px;
-  padding: 0px;
-  width: 100%;
-  z-index: 4;
+#header-wrapper{
+  height: 90px;
+  position: relative;
 
-  .navbar-default{
+  .header {
+    
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 0px;
+    width: 100%;
+    z-index: 4;
     @include transition(background-color 0.3s ease-out);
     background-color: transparent;
-    
-    .navbar-brand{
-      span{
-        @include transition(opacity 0.2s ease-in-out);
-        display: none;
+      
+    .navbar-default{
+      
+      .navbar-brand{
         
-      }
-      &.active{
-        span{
-          display: inline-block;
-          opacity: 1;
+        &.active{
+          span{
+            display: inline-block;
+            opacity: 1;
+          }
+        }
+
+        &.just-logo{
+          width: 90px;
+          span{
+            display: none;
+          }
         }
       }
-
-      &.just-logo{
-        width: 90px;
+      h2{
+        @include transition(opacity 0.2s ease-in-out);
+        opacity: 0;
       }
-    }
-    h2{
-      @include transition(opacity 0.2s ease-in-out);
-      opacity: 0;
-      display: none;
     }
 
     &.fixed{
-      background-color: #000;
-      border-bottom: 3px solid white;
+      position: fixed;
+      background-color: rgba(0,0,0,1);
+      border-bottom: 2px solid white;
+      .navbar-default {
+        .navbar-brand{
+          span{
+            display: none;
+          }
+        }
 
-      h2{
-        display: inline-block;
-        opacity: 1;
-        float: left;
-        &.fade-out{
-          opacity: 0;
+        h2{
+          display: inline-block;
+          float: left;
+          margin-top: 27px;
+          opacity: 1;
+          color: #FFFFFF;
+          &.fade-out{
+            opacity: 0;
+          }
+        }
+
+      }
+
+      
+
+    }
+
+    .container{
+
+      &.navbar-open{
+        background: rgba(0,0,0,0.75);
+        padding: 0px 15px;
+        .navbar-nav{
+          width: 100%;
         }
       }
-
     }
-  }
 
-  .container{
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 40px;
+      padding-bottom: 19px;
+    }
 
-    &.navbar-open{
-      background: rgba(0,0,0,0.75);
-      padding: 0px 15px;
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+      background: transparent;
+    }
+
+    .navbar-header{
+      button{
+        margin-top:25px;
+        margin-right: 20px;
+      }
+    }
+
+    .navbar-default{
+      background: transparent;
+      border: 0px;
+      color: #ffffff;
+      &.navbar{
+        margin-bottom: 0px;
+      }
+      .navbar-brand{
+        color: #ffffff;
+        height: 90px;
+        width: 183px;
+        
+        img{
+          width: 60px;
+          float:left;
+        }
+
+        span{
+          float: right;
+          margin-top: 8px;
+          width: 85px;
+          margin-left: 8px;
+          @include transform(skewX(-5deg) skewY(-1deg));
+        }
+
+      }
+
       .navbar-nav{
-        width: 100%;
-      }
-    }
-  }
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-
-  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background: transparent;
-  }
-
-  .navbar-header{
-    button{
-      margin-top:25px;
-      margin-right: 20px;
-    }
-  }
-
-  .navbar-default{
-    background: transparent;
-    border: 0px;
-    color: #ffffff;
-    .navbar-brand{
-      color: #ffffff;
-      height: 90px;
-      width: 183px;
-      
-      img{
-        width: 60px;
-        float:left;
-      }
-
-      span{
         float: right;
-        margin-top: 8px;
-        width: 85px;
-        margin-left: 8px;
-        opacity: 0;
-        @include transform(skewX(-5deg) skewY(-1deg));
       }
 
-    }
-
-    .navbar-nav{
-      float: right;
-    }
-
-    .navbar-nav > li {
-       &.active{
-        background: transparent;
+      .navbar-nav > li {
+         &.active{
+          background: transparent;
+        }
       }
+      .navbar-nav > li > a{
+        color: #ffffff;
+        font-size: 18px;
+        padding-top: 30px;
+      }
+
+
+
     }
-    .navbar-nav > li > a{
-      color: #ffffff;
-      font-size: 18px;
-      padding-top: 30px;
-    }
-
-
-
   }
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
+  height: 70px;
+  padding-top: 30px;
+  margin-bottom: 20px;
   color: #ffffff;
+  text-align: center;
+  p{
+    margin-bottom: 0px;
+    i{
+      color: #cccccc;
+      font-size: 13px;
+    }
+  }
 }
 
 .container-narrow > hr {
@@ -335,6 +364,7 @@ a{
   width: 100%;
   max-width: 684px;
   min-height: 850px;
+  padding-top: 0px;
   margin: auto;
   
   .marketing{
@@ -355,7 +385,9 @@ a{
 #about{
   
   min-height: 850px;
-  
+  h2.section-title{
+    margin-top: -28px;
+  }
   .row{
     margin-top: 50px;
   }
@@ -422,10 +454,6 @@ a{
 
   min-height: 850px;
 
-  h2{
-    margin-top: -45px;
-  }
-
   .repos{
     h3{
       font-size: 28px;
@@ -465,10 +493,6 @@ a{
 #projects{
   min-height: 850px;
 
-  h2{
-    margin-top: -45px;
-  }
-
   .row{
     margin-top: 50px;
   }
@@ -491,11 +515,7 @@ a{
 
 #contact{
 
-  min-height: 630px;
-
-  h2{
-    margin-top: -45px;
-  }
+  min-height: 595px;
 
   .row{
     margin-top: 50px;
@@ -563,9 +583,9 @@ a{
 
 .view-content{
     h2.section-title{
-      margin-bottom: 20px;
-      margin-left: 80px;
-      margin-top: -15px;
+        margin-bottom: 70px;
+        margin-left: 76px;
+        margin-top: -58px;
     }
 }
 
