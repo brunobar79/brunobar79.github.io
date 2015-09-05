@@ -525,6 +525,9 @@ a{
   }
   .input-group{
     display: block;
+    input, textarea{
+        border-radius: 2px;
+    }
   }
   .form-group {
     margin-bottom: 60px;
