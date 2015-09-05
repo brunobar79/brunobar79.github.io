@@ -9,6 +9,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "fonts.scss";
 @import "mixins.scss";
 
+$blue-text-color: #337ab7;
+$blue-home-bg: #337ab7;
+$padding-between-sections: 100px;
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -47,6 +51,7 @@ h1, h2, h3, h4, h5 {
 
 a{
   font-weight: 500;
+  color: $blue-text-color;
 }
 
 .main-bg{
@@ -128,7 +133,7 @@ a{
     &.fixed{
       position: fixed;
       background-color: rgba(0,0,0,1);
-      border-bottom: 2px solid white;
+      border-bottom: 1px solid grey;
       .navbar-default {
         .navbar-brand{
           span{
@@ -141,7 +146,7 @@ a{
           float: left;
           margin-top: 27px;
           opacity: 1;
-          color: #FFFFFF;
+          color: $blue-text-color;
           &.fade-out{
             opacity: 0;
           }
@@ -276,8 +281,8 @@ a{
         box-shadow: 0 0 300px 191px rgba(255,255,255,.15);
         color: #333333;
         */
-        background: none repeat scroll 0 0 #337BB7;
-        border: 2px solid #337ab7;
+        background: none repeat scroll 0 0 $blue-home-bg;
+        border: 2px solid $blue-home-bg;
         box-shadow: 0 0 300px 191px rgba(255, 255, 255, 0.15);
         color: white;
         display: inline-block;
@@ -354,7 +359,7 @@ a{
       &.glyphicon{
         width: 100%;
         font-size: 25px;
-        margin-top: 25px;
+        margin-top: 15px;
       }
     }
   }
@@ -363,7 +368,6 @@ a{
 #home{
   width: 100%;
   max-width: 684px;
-  min-height: 850px;
   padding-top: 0px;
   margin: auto;
   
@@ -384,10 +388,6 @@ a{
 /*** ABOUT US PAGE ***/
 #about{
   
-  min-height: 850px;
-  h2.section-title{
-    margin-top: -28px;
-  }
   .row{
     margin-top: 50px;
   }
@@ -452,8 +452,6 @@ a{
 
 #open-source{
 
-  min-height: 850px;
-
   .repos{
     h3{
       font-size: 28px;
@@ -491,7 +489,6 @@ a{
 }
 
 #projects{
-  min-height: 850px;
 
   .row{
     margin-top: 50px;
@@ -516,6 +513,7 @@ a{
 #contact{
 
   min-height: 595px;
+  padding-bottom: 0px;
 
   .row{
     margin-top: 50px;
@@ -539,6 +537,19 @@ a{
   }
   .btn{
     margin-top: 20px;
+    border: 2px solid $blue-text-color;
+    background-color: transparent;
+    color: $blue-home-bg;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 7px 30px;
+    letter-spacing: 0.2em;
+    @include transition(all 0.2s ease-out);
+
+    &:hover{
+      background: $blue-text-color;
+      color: #fff;
+    }
   }
   .find-me {
     margin-left: 40px;
@@ -582,10 +593,13 @@ a{
 
 
 .view-content{
+
+    padding-top: $padding-between-sections;
+    padding-bottom: $padding-between-sections;
+
     h2.section-title{
         margin-bottom: 70px;
         margin-left: 76px;
-        margin-top: -58px;
     }
 }
 
@@ -597,10 +611,10 @@ a{
     @include transform(translateY(0));
   }
   40% {
-    @include transform(translateY(-30px));
+    @include transform(translateY(-20px));
   }
   60% {
-    @include transform(translateY(-15px));
+    @include transform(translateY(-10px));
   }
 }
 
