@@ -93,7 +93,51 @@ a{
   width: 100%;
   z-index: 4;
 
+  .navbar-default{
+    @include transition(background-color 0.3s ease-out);
+    background-color: transparent;
+    
+    .navbar-brand{
+      span{
+        @include transition(opacity 0.2s ease-in-out);
+        display: none;
+        
+      }
+      &.active{
+        span{
+          display: inline-block;
+          opacity: 1;
+        }
+      }
+
+      &.just-logo{
+        width: 90px;
+      }
+    }
+    h2{
+      @include transition(opacity 0.2s ease-in-out);
+      opacity: 0;
+      display: none;
+    }
+
+    &.fixed{
+      background-color: #000;
+      border-bottom: 3px solid white;
+
+      h2{
+        display: inline-block;
+        opacity: 1;
+        float: left;
+        &.fade-out{
+          opacity: 0;
+        }
+      }
+
+    }
+  }
+
   .container{
+
     &.navbar-open{
       background: rgba(0,0,0,0.75);
       padding: 0px 15px;
@@ -129,27 +173,20 @@ a{
     .navbar-brand{
       color: #ffffff;
       height: 90px;
-
-
+      width: 183px;
+      
       img{
         width: 60px;
         float:left;
       }
+
       span{
         float: right;
         margin-top: 8px;
         width: 85px;
         margin-left: 8px;
         opacity: 0;
-        @include transition(opacity 0.2s ease-in-out);
         @include transform(skewX(-5deg) skewY(-1deg));
-
-      }
-      
-      &.active{
-        span{
-          opacity: 1;
-        }
       }
 
     }
@@ -510,11 +547,6 @@ a{
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
-    @include transition(background-color 0.3s ease-out);
-    
-    &.fixed{
-      background-color: red;
-    }
   }
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {

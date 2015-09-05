@@ -19,7 +19,6 @@ angular.module('website',['duScroll'])
     $rootScope.screen.desktop = $window.innerWidth > 768;
     $rootScope.screen.tablet = $window.innerWidth <= 768;
     $rootScope.screen.mobile = $window.innerWidth <= 375;
-    console.log($rootScope); 
 
     $timeout(function(){
     	var path = $location.path().replace(/\//g,'');

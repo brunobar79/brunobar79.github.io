@@ -22,8 +22,8 @@
     <![endif]-->
     <!-- Add your site or application content here -->
     <div class="header" ng-controller="HeaderCtrl" >
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container" scroll="500" ng-class="{'navbar-open':navbarStatusOpen}">
+      <div class="navbar navbar-default" sticky-header sticky-trigger="home" role="navigation">
+        <div class="container"  ng-class="{'navbar-open':navbarStatusOpen}">
           
           <div class="navbar-header">
 
@@ -34,12 +34,13 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#home" du-scrollspy>
+            <a class="navbar-brand" href="#home">
               <img src="images/logo-white.png"/>
               <span>
                 BRUNO BARBIERI
               </span>
             </a>
+            <h2 id="header-section-name"></h2>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -104,8 +105,6 @@
         <script src="scripts/controllers/header.js"></script>
         <script src="scripts/controllers/openSource.js"></script>
         <script src="scripts/controllers/contact.js"></script>
-
-
         <script src="scripts/directives/stickyHeader.js"></script>
 
         <!-- endbuild -->
