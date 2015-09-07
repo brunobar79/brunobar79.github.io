@@ -662,4 +662,21 @@ a{
   }
 }
 
+div.app-loading{
+
+  div.animated-container {
+      position: fixed;
+      top: 0px ;
+      bottom: 0px ;
+      right: 0px ;
+      left: 0px ;
+      background-color: #000 ;
+      opacity: 1.0 ;
+      z-index: 999999;
+
+      @include spinner;
+  }      
+}
+
+
 @import "responsive-mobile.scss"; 

@@ -21,56 +21,71 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <!-- Add your site or application content here -->
-    <div ng-controller="HeaderCtrl" id="header-wrapper">
-      <div class="header"  sticky-header sticky-trigger="home">
-        <div class="navbar navbar-default"  role="navigation">
-          <div class="container"  ng-class="{'navbar-open':navbarStatusOpen}">
-            
-            <div class="navbar-header">
 
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse" ng-click="toggleNavbarStatus()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
+    <div class="site-wrapper">
+      <div class="app-loading">
+        <!-- BEGIN: Actual animated container. -->
+        <div class="animated-container">
+          <div class="la-ball-running-dots">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+        </div>
+      </div>
 
-              <a class="navbar-brand" href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">
-                <img src="images/logo-white.png"/>
-                <span>
-                  BRUNO BARBIERI
-                </span>
-              </a>
-              <h2 id="header-section-name"></h2>
-            </div>
+      <div ng-controller="HeaderCtrl" id="header-wrapper">
+        <div class="header"  sticky-header sticky-trigger="home">
+          <div class="navbar navbar-default"  role="navigation">
+            <div class="container"  ng-class="{'navbar-open':navbarStatusOpen}">
+              
+              <div class="navbar-header">
 
-            <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse" ng-click="toggleNavbarStatus()">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
 
-              <ul class="nav navbar-nav" >
-                <li><a href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Home</a></li>
-                <li><a href="#about" du-smooth-scroll du-scrollspy offset="-92" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">About</a></li>
-                <li><a href="#open-source" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Open Source</a></li>
-                <li><a href="#projects" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Projects</a></li>
-                <li><a href="#contact" du-smooth-scroll du-scrollspy ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Contact</a></li>
-              </ul>
+                <a class="navbar-brand" href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">
+                  <img src="images/logo-white.png"/>
+                  <span>
+                    BRUNO BARBIERI
+                  </span>
+                </a>
+                <h2 id="header-section-name"></h2>
+              </div>
+
+              <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+                <ul class="nav navbar-nav" >
+                  <li><a href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Home</a></li>
+                  <li><a href="#about" du-smooth-scroll du-scrollspy offset="-92" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">About</a></li>
+                  <li><a href="#open-source" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Open Source</a></li>
+                  <li><a href="#projects" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Projects</a></li>
+                  <li><a href="#contact" du-smooth-scroll du-scrollspy ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Contact</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div ng-include="'views/home.html'" ></div>
-      <div ng-include="'views/about.html'"></div>
-      <div ng-include="'views/open-source.html'"></div>
-      <div ng-include="'views/projects.html'"></div>
-      <div ng-include="'views/contact.html'"></div>
-    </div>
+      <div class="container">
+        <div ng-include="'views/home.html'" ></div>
+        <div ng-include="'views/about.html'"></div>
+        <div ng-include="'views/open-source.html'"></div>
+        <div ng-include="'views/projects.html'"></div>
+        <div ng-include="'views/contact.html'"></div>
+      </div>
 
-    <div class="footer">
-      <div ng-include="'views/partials/footer.html'" ></div>      
+      <div class="footer">
+        <div ng-include="'views/partials/footer.html'" ></div>      
+      </div>
     </div>
-
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -107,6 +122,7 @@
         <script src="scripts/controllers/header.js"></script>
         <script src="scripts/controllers/openSource.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/directives/loader.js"></script>
         <script src="scripts/directives/stickyHeader.js"></script>
 
         <!-- endbuild -->
