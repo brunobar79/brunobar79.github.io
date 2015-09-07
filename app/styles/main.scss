@@ -646,7 +646,9 @@ a{
   left: 0;
   width: 250.625em;
   height: 43.75em;
-  @include animation(cloudLoop 30s linear infinite);
+  &.animate{
+    @include animation(cloudLoop 30s linear infinite);
+  }
 }
 
 
@@ -674,7 +676,7 @@ div.app-loading{
       opacity: 1.0 ;
       z-index: 999999;
 
-      @include spinner;
+      @include timer-spinner;
   }      
 }
 
