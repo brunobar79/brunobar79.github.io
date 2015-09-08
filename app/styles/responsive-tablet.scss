@@ -1,0 +1,69 @@
+@media screen and (min-width: 376px) and (max-width: 768px) {
+	
+	//Responsive tweaks
+
+	#header-wrapper {
+		.header.fixed {
+			.navbar-default {
+				.navbar-header{
+					button{
+						margin-top: 26px;
+					}
+				}
+				h2{
+					width: 550px;
+					height: 66px;
+				    vertical-align: middle;
+				    margin-top: 12px;
+				    text-align: center;
+				    line-height: 66px;
+				    padding-top: 0px;
+				}
+			}
+		}
+	}
+
+	.view-content{
+		min-height: 1024px;
+		h2.section-title{
+			text-align: center;
+			margin: 0px;
+		}
+	}
+
+	.jumbotron h2{
+		margin-top: 110px;
+	}
+
+	#home {
+		.marketing{
+			margin-top: 250px;
+		}
+	}
+
+	#open-source {
+		.rows.repos{
+			margin-top: 60px;
+		}
+		.github-logo {
+    		margin-top: 100px;
+    	}
+    }
+
+    #about{
+    	ul.polaroids{
+    		width: 530px;
+    		margin: 70px auto;
+    		
+    		li{
+    			margin-right: 40px;
+    		}
+		}	
+	}
+	.footer{
+
+		padding-bottom: 100px;
+    	padding-top: 100px;
+
+	}
+}

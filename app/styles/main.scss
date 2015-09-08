@@ -9,6 +9,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "fonts.scss";
 @import "mixins.scss";
 
+$bg-color: #000000;
 $blue-text-color: #337ab7;
 $blue-home-bg: #337ab7;
 $padding-between-sections: 100px;
@@ -27,7 +28,7 @@ html{
 
 body {
   padding: 0;
-  background: #000000;
+  background: $bg-color;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
   @include font-smoothing(on);
@@ -229,8 +230,15 @@ a{
         font-size: 18px;
         padding-top: 30px;
       }
-
-
+      
+      .navbar-toggle{
+        &:focus, &:hover{
+          background-color: transparent;
+        }
+        .icon-bar {
+          background-color: #ddd;
+        }
+      }
 
     }
   }
@@ -672,13 +680,15 @@ div.app-loading{
       bottom: 0px ;
       right: 0px ;
       left: 0px ;
-      background-color: #000 ;
+      background-color: $bg-color;
       opacity: 1.0 ;
       z-index: 999999;
-
+      @include transform(translate3d(0,0,0));
+      
       @include timer-spinner;
   }      
 }
 
+@import "responsive-tablet.scss"; 
 
 @import "responsive-mobile.scss"; 

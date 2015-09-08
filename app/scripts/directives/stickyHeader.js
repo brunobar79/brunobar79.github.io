@@ -119,7 +119,14 @@ angular.module('website')
 									//Set text
 									h2.innerText = headerText;
 									lastHeaderText = headerText;
-									//Fade in
+									//Fit text depending how many lines 
+									var MAX_CHARS_PER_LINE = 8;
+									if(headerText.length <= MAX_CHARS_PER_LINE){
+										angular.element(h2).addClass('single-line');
+									}else{
+										angular.element(h2).removeClass('single-line');
+									}
+
 									angular.element(h2).removeClass('fade-out');
 								},FADE_DURATION);
 

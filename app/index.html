@@ -8,12 +8,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css' />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic" rel="stylesheet" type="text/css">
     <!-- endbuild -->
   </head>
   <body ng-app="website">
@@ -49,8 +49,8 @@
 
                 <a class="navbar-brand" href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">
                   <img src="images/logo-white.png"/>
-                  <span>
-                    BRUNO BARBIERI
+                  <span >
+                      BRUNO BARBIERI
                   </span>
                 </a>
                 <h2 id="header-section-name"></h2>
@@ -59,11 +59,11 @@
               <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
                 <ul class="nav navbar-nav" >
-                  <li><a href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">Home</a></li>
-                  <li><a href="#about" du-smooth-scroll du-scrollspy offset="-92" ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse">About</a></li>
-                  <li><a href="#open-source" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Open Source</a></li>
-                  <li><a href="#projects" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Projects</a></li>
-                  <li><a href="#contact" du-smooth-scroll du-scrollspy ng-click="menuLinkClick()" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Contact</a></li>
+                  <li><a href="#home" du-smooth-scroll du-scrollspy offset="90" class="active" ng-click="menuLinkClick('/')" data-toggle="collapse" data-target="#js-navbar-collapse">Home</a></li>
+                  <li><a href="#about" du-smooth-scroll du-scrollspy offset="-92" ng-click="menuLinkClick('/about')" data-toggle="collapse" data-target="#js-navbar-collapse">About</a></li>
+                  <li><a href="#open-source" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick('/open-source')" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Open Source</a></li>
+                  <li><a href="#projects" du-smooth-scroll du-scrollspy  ng-click="menuLinkClick('/projects')" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Projects</a></li>
+                  <li><a href="#contact" du-smooth-scroll du-scrollspy ng-click="menuLinkClick('/contact')" data-toggle="collapse" data-target="#js-navbar-collapse" offset="-92">Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -86,13 +86,14 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+      ga('create', 'UA-67295329-1', 'auto');
+      ga('send', 'pageview');
+
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->

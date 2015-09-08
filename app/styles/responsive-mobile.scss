@@ -1,6 +1,42 @@
+@media screen and (max-width: 320px) {
+	.jumbotron{
+		margin-bottom: 10px;
+		h2{
+			font-size: 26px;
+		}
+	}
+}
 @media screen and (max-width: 376px) {
 
-	//Responsive fixes
+	//Responsive tweaks
+
+	#header-wrapper {
+		.header.fixed {
+			.navbar-default {
+				.navbar-header{
+					button{
+						margin-top: 26px;
+					}
+				}
+				h2{
+					width: 210px;
+					height: 66px;
+				    vertical-align: middle;
+				    margin-top: 12px;
+				    text-align: center;
+				    line-height: 30px;
+				    padding-top: 3px;
+					&.single-line{
+				    	line-height: 66px;
+				    	padding-top: 0px;
+				    }
+				}
+			}
+		}
+	}
+
+
+
 	.jumbotron{
 		margin-bottom: 20px;
 		h2{

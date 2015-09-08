@@ -17,8 +17,15 @@
     	console.log('CHANGED TO ',$scope.navbarStatusOpen);
     };
 
-    $scope.menuLinkClick = function(){
+    $scope.menuLinkClick = function(section){
     	//TO DO, track virtual page view
+        if(typeof ga === 'function' && section !==''){
+            /* jshint ignore:start */
+            ga('set', 'page', section);
+            ga('send', 'pageview');
+            /* jshint ignore:end */
+        }
+
     	angular.element('.navbar .container').removeClass('navbar-open');
     	angular.element('.navbar-collapse').removeClass('in');
     	$scope.navbarStatusOpen = false;

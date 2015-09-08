@@ -40,9 +40,10 @@ angular.module('website')
 
 
     function init(){
+    	
 	    var today = new Date();
-	    var born  = new Date('02-01-1988');
-	    var startDate = new Date('01-01-2004');
+	    var born  = new Date('1988-02-01T00:00:00');
+	    var startDate = new Date('2004-01-01T00:00:00');
 
 	    function tsToYears(ts){
 	    	return Math.floor((ts) / 1000 / 60 / 60 / 24 / 365);
